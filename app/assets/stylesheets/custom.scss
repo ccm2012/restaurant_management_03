@@ -1524,7 +1524,6 @@ $color-c1810c: #c1810c;
 
   li {
     font-size: 16px;
-    margin-left: 20px;
   }
 }
 
@@ -1905,12 +1904,11 @@ $color-c1810c: #c1810c;
 }
 
 .pj-button {
-  border: solid 1px $alto;
   border-radius: 3px;
   color: $boulder;
   cursor: pointer;
   font: normal 18px Verdana, sans-serif;
-  padding: 7px 15px;
+  margin: 0 5px;
   position: relative;
 }
 
@@ -1919,8 +1917,6 @@ $color-c1810c: #c1810c;
 .pj-button-detailed:active,
 .pj-button-detailed:visited {
   background: $alabaster url("http://demo.phpjabbers.com/1491512212_474/core/framework/libs/pj/img/pj-button-arrow-down.png") no-repeat center center;
-  box-shadow: 1px 1px 1px $alabaster;
-  padding: 15px;
   text-decoration: none;
 }
 

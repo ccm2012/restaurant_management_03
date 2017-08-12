@@ -84,3 +84,10 @@ function addDish(index, length) {
     });
   }
 }
+
+$(document).on('turbolinks:load', function(){
+  $('.filter-item').on('click', function(){
+    $('.filter-dropdown').text($(this).text());
+    $('.filter-dropdown').trigger('click');
+  });
+});

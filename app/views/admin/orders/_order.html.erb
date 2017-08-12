@@ -1,26 +1,35 @@
 <%= search_form_for [:admin, order.search], remote: true, method: :get do |f| %>
   <div class="b10">
-    <%= f.text_field :code_cont,
+    <div class="filter-row">
+      <%= f.text_field :code_cont,
       class:"pj-form-field pj-form-field-search w350",
-      placeholder: t("staff_order.search_by_code") %>
-    <div class="float_right t5">
-      <%= link_to t(".all"), {q: nil, remote: true},
-        class:"pj-button btn-all"%>
-      <%= link_to t("admin.orders.form.uncheck"),
-        {type: t("admin.orders.form.uncheck")},
-        remote: true, class:"pj-button btn-all" %>
-      <%= link_to t("admin.orders.form.approved"),
-        {type: t("admin.orders.form.approved")},
-        remote: true, class:"pj-button btn-all" %>
-      <%= link_to t("admin.orders.form.declined"),
-        {type: t("admin.orders.form.declined")},
-        remote: true, class:"pj-button btn-all" %>
-      <%= link_to t("admin.orders.form.serving"),
-        {type: t("admin.orders.form.serving")},
-        remote: true, class:"pj-button btn-all" %>
-      <%= link_to t("admin.orders.form.done"),
-        {type: t("admin.orders.form.done")},
-        remote: true, class:"pj-button btn-all" %>
+        placeholder: t("staff_order.search_by_code") %>
+      <div class="dropdown">
+        <button class="btn btn-default filter-dropdown dropdown-toggle"
+          type="button" data-toggle="dropdown">
+          <%= t ".all" %>
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><%= link_to t(".all"), {q: nil, remote: true},
+            class:"filter-item" %></li>
+          <li><%= link_to t("admin.orders.form.uncheck"),
+            {type: t("admin.orders.form.uncheck")},
+            remote: true, class:"filter-item" %></li>
+          <li><%= link_to t("admin.orders.form.approved"),
+            {type: t("admin.orders.form.approved")},
+            remote: true, class:"filter-item" %></li>
+          <li><%= link_to t("admin.orders.form.declined"),
+            {type: t("admin.orders.form.declined")},
+            remote: true, class:"filter-item" %></li>
+          <li><%= link_to t("admin.orders.form.serving"),
+            {type: t("admin.orders.form.serving")},
+            remote: true, class:"filter-item" %></li>
+          <li><%= link_to t("admin.orders.form.done"),
+            {type: t("admin.orders.form.done")},
+            remote: true, class:"filter-item" %></li>
+        </ul>
+      </div>
     </div>
   </div>
   <div class="pj-form-filter-advanced col-sm-12">
@@ -56,9 +65,11 @@
         </p>
         <p>
           <label class="title">&nbsp;</label>
-          <%= f.submit  t(".search"), class: "pj-button" %>
+          <%= f.button class: "btn btn-default" do %>
+            <span class="glyphicon glyphicon-search"></span> <%= t(".search") %>
+          <% end %>
           <%= link_to t("staff_order.cancel"), {remote: true},
-            class: "pj-button", id: "clear" %>
+            class: "btn btn-default", id: "clear" %>
         </p>
       </div>
       <div class="w350">
