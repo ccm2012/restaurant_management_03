@@ -845,3 +845,16 @@ en:
   txt_in: "IN"
   txt_to: "TO"
   txt_from: "FROM"
+  devise:
+    sign_in: "Sign in"
+    sign_in2: "Sign In"
+    sign_in_with: "Sign in with %{provider}"
+    sign_in_with_gg: "Sign in with Google"
+    sign_up: "Sign up"
+    forgot_pass: "Forgot your password?"
+    receive_confirmation: "Didn't receive confirmation instructions?"
+    receive_unlock: "Didn't receive unlock instructions?"
+    welcome: "Welcome to "
+    omniauth_callbacks:
+      customer:
+        google: Successfully sign in with Google

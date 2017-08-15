@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for staff
-    session[:previous_url] || default_role_redirect(staff)
+    session[:previous_url] || redirect_path(staff)
   end
 
   protected
@@ -24,6 +24,14 @@ class ApplicationController < ActionController::Base
   end
 
   private
+
+  def redirect_path user
+    if user.is_a? Customer
+      root_path
+    else
+      default_role_redirect user
+    end
+  end
 
   def default_role_redirect staff
     case staff.staff_role

@@ -33,6 +33,10 @@ gem "prawn-table"
 gem "ratyrate"
 gem "groupdate"
 gem "week_of_month"
+gem "devise"
+gem "omniauth"
+gem "omniauth-google-oauth2"
+gem "figaro"
 
 group :development, :test do
   gem "byebug", platform: :mri

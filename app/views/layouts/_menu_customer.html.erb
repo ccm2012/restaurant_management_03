@@ -14,4 +14,21 @@
   <li id="cart-text" class="smoothScroll fade-in-left">
     <%= render "layouts/cart_text" %>
   </li>
+  <% if customer_signed_in? %>
+    <li>
+      <%= link_to destroy_customer_session_path,
+        class: "smoothScroll animated fadeInDown",
+        "data-wow-delay": "0.7s", method: :delete do %>
+        <i class="fa fa-lg fa-sign-out fa-lg"></i>
+      <% end %>
+    </li>
+  <% else %>
+    <li>
+      <%= link_to new_customer_session_path,
+        class: "smoothScroll animated fadeInDown",
+        "data-wow-delay": "0.7s", method: :get do %>
+        <i class="fa fa-lg fa-sign-in fa-lg"></i>
+      <% end %>
+    </li>
+  <% end %>
 </ul>
