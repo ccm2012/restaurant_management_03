@@ -110,6 +110,8 @@ en:
       delete_fail: Failed. Something's wrong.
       cant_find_order: Can't find any order with this infomation!
       find_order: Found order successfully!
+    staff:
+      notloggedin: You have to log in first
   admin:
     promo: Promo
     error_not_administrator: "You are not Administrator"

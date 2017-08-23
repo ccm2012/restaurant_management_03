@@ -30,7 +30,22 @@
             <span class="icon icon-bar"></span>
             <span class="icon icon-bar"></span>
           </button>
-          <%= link_to root_path, method: :get do %>
+
+          <% if current_staff.present? %>
+            <% if current_staff.administrator? %>
+              <% final = admin_dashboards_path %>
+            <% elsif current_staff.receptionist? %>
+              <% final = admin_orders_path %>
+            <% elsif current_staff.chef? %>
+              <% final = admin_chef_index_path %>
+            <% else %>
+              <% final = staffs_path %>
+            <% end %>
+          <% else %>
+            <% final = root_path %>
+          <% end %>
+
+          <%= link_to final, method: :get do %>
             <div class="parallax-div">
               <h1 class="parallax-text">
                 <%= t "brand" %>
