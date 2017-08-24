@@ -1,0 +1,169 @@
+@import "color";
+
+.map3 {
+  .tables {
+    margin: 0;
+    width: 26vw;
+  }
+}
+
+.map2 {
+
+  .tables {
+    margin: 0;
+  }
+}
+
+.table-section {
+  .tables {
+    background: transparent;
+    min-height: 0;
+    padding-top: 0;
+  }
+}
+
+.tracking-order-process {
+  .tables {
+    background-color: $white;
+  }
+}
+
+.col-sm-6 {
+  .box {
+    .col-sm-offset-3 {
+      .tables {
+        margin-bottom: 0;
+      }
+
+      .step2 {
+        .tables {
+          margin-bottom: 0;
+          margin-top: -65px;
+          transform: scale(.8);
+        }
+      }
+    }
+  }
+}
+
+.table-section {
+  .heading-small {
+    .tables {
+      margin-top: 0;
+    }
+  }
+}
+
+.stylish-heading {
+  .h1style {
+    .font-mont {
+      .heading-small {
+        .tables {
+          color: $black;
+          margin-bottom: 0;
+          margin-top: -20px;
+        }
+      }
+    }
+
+    .font-mont {
+      .tables {
+        color: $black;
+        margin-top: -20px;
+      }
+    }
+  }
+}
+
+.text-color-white {
+  .tables {
+    color: $black;
+  }
+}
+
+.progress-book {
+  .progress-medium {
+    .tables {
+      padding: 0;
+    }
+  }
+}
+.table-container {
+  background-attachment: local;
+  background-image: url("/assets/restaurant.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 80vh;
+  margin: 0 auto;
+  overflow: scroll;
+  position: relative;
+  width: 90vw;
+}
+
+.text-over-image {
+  align-items: center;
+  bottom: 0;
+  color: $black;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.table-choosing-step {
+  background-color: $white;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  height: 62vh;
+  margin: 0 auto;
+  padding: 10px;
+  width: 70%;
+}
+
+.btn-table {
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 2px;
+  position: absolute;
+  white-space: pre-line;
+}
+
+.btn-maru {
+  box-shadow: 1px 1px 3px $gray-darked2;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.btn-choose {
+  background: linear-gradient(to bottom, $orangered, $red);
+  box-shadow: 1px 1px 3px $gray-darked2;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.btn-maru:hover {
+  background: linear-gradient(to bottom, $btn-color1, $spring-green);
+  text-decoration: none;
+}
+
+.btn-maru:active {
+  background: linear-gradient(to bottom, $pink, $orangered);
+  text-decoration: none;
+}
+
+.btn-batsu {
+  background: linear-gradient(to bottom, $gray, $dark-silver);
+  box-shadow: 1px 1px 3px $gray-darked2;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 20px;
+  text-decoration: none;
+}

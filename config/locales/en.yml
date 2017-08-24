@@ -431,6 +431,9 @@ en:
         code: Code
         customer_name: Customer Name
         day: Day
+    waiter:
+      table:
+        map: Awesomecity tables map
   button:
     search: Search
     close: Close
