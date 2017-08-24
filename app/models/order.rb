@@ -9,7 +9,7 @@ class Order < ApplicationRecord
 
   belongs_to :customer
   belongs_to :table, inverse_of: :orders
-  delegate :capacity, to: :table
+  delegate :capacity, :code, to: :table
 
   has_many :order_dishes, dependent: :destroy
   has_many :order_combos, dependent: :destroy
