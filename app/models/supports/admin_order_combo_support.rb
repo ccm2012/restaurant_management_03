@@ -12,9 +12,13 @@ module Supports
         id = combo_delete.id
         if combo.combo_id == combo_delete.combo_id && combo.id != id
           combo.quantity += combo_delete.quantity
-          order_combos.delete_if{|item| item.id == id}
+          remove_deleted_item order_combos, id
         end
       end
+    end
+
+    def remove_deleted_item order_combos, id
+      order_combos.delete_if{|item| item.id == id}
     end
 
     def merge_duplication order_combos

@@ -12,9 +12,13 @@ module Supports
         id = dish_delete.id
         if dish.dish_id == dish_delete.dish_id && dish.id != id
           dish.quantity += dish_delete.quantity
-          order_dishes.delete_if{|item| item.id == id}
+          remove_deleted_item order_dishes, id
         end
       end
+    end
+
+    def remove_deleted_item order_dishes, id
+      order_dishes.delete_if{|item| item.id == id}
     end
 
     def merge_duplication order_dishes
