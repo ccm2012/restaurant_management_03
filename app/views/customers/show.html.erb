@@ -1,0 +1,96 @@
+<div class="container">
+  <div class="customer">
+    <div class="row">
+      <div class="base-info">
+        <div class="col-md-3">
+          <div class="ava">
+            <%= image_tag "ava-default.jpg" %>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="row">
+            <div class="name info">
+              <div class="title">
+                <%= t "customers.name" %>
+              </div>
+              <div class="content">
+                <%= @customer.name %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="email info">
+              <div class="title">
+                <%= t "customers.email" %>
+              </div>
+              <div class="content">
+                <%= @customer.email %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="phone-num info">
+              <div class="title">
+                <%= t "customers.phone" %>
+              </div>
+              <div class="content">
+                <%= @customer.phone_num %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-md-push-1">
+          <div class="row">
+            <div class="code info">
+              <div class="title">
+                <%= t "customers.code" %>
+              </div>
+              <div class="content">
+                <%= @customer.code %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="membership-level info">
+              <div class="title">
+                <%= t "customers.membership_level" %>
+              </div>
+              <div class="content">
+                <%= @membership_level %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+          <div class="membership-level info">
+            <div class="title">
+              <%= t "customers.point" %>
+            </div>
+            <div class="content">
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="ordered-table">
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+          <tr>
+            <th><%= t "customers.table_code" %></th>
+            <th><%= t "customers.order_code" %></th>
+            <th><%= t "customers.time_in" %></th>
+            <th><%= t "customers.order_status" %></th>
+          </tr>
+          <% @orders.each do |order| %>
+            <tr>
+              <td><%= order.table_code %></td>
+              <td><%= order.code %></td>
+              <td><%= order.day.strftime("%d-%m-%Y")%> <%= order.time_in %></td>
+              <td><%= order.status %></td>
+            </tr>
+          <% end %>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

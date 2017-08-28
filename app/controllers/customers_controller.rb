@@ -1,4 +1,6 @@
 class CustomersController < ApplicationController
+  before_action :find_customer_by_id, only: :show
+
   def index
     customer_params_code = customer_params[:code]
 
@@ -21,6 +23,18 @@ class CustomersController < ApplicationController
     end
   end
 
+  def show
+    customer_orders = customer.orders
+    @orders = customer_orders - customer_orders.done
+    membership_current = customer.membership_current
+    @membership_level =
+      if membership_current.present?
+        membership_current.name
+      else
+        "0"
+      end
+  end
+
   private
 
   attr_reader :customer
@@ -35,5 +49,9 @@ class CustomersController < ApplicationController
     return render json: {status: 0} unless session_customer
     return render json: {status: -1} if session_customer.is_blacklist?
     render json: {status: 1}
+  end
+
+  def find_customer_by_id
+    @customer = Customer.find_by id: params[:id]
   end
 end

@@ -31,6 +31,22 @@ en:
       book_table: "Book table"
     slogan:
       view_menu: "View menu"
+  customers:
+    name: "Full Name:"
+    email: "Email Address:"
+    phone: "Phone Number:"
+    membership_level: "MemberShip Level:"
+    code: "Customer Code:"
+    tables: "Tables Ordering"
+    table_code: "Table Code"
+    order_code: "Order Code"
+    time_in: "Time In"
+    order_status: "Order Status"
+    order_status_uncheck: "Uncheck"
+    order_status_declined: "Declined"
+    order_status_approved: "Approved"
+    order_status_serving: "Serving"
+    point: "Point:"
   home:
     menu: Menu
     combo: Combo
