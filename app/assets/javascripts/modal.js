@@ -33,7 +33,29 @@ $(document).on('turbolinks:load', function(){
   $(document).on('click', '.btn-show-customer', function() {
     var id = $(this).parent().parent().find('#customer-id').data('id');
     $('.show-info-customer-' + id).show();
-    return false;
+  });
+
+  $(document).on('click', '.btn-sign-in', function() {
+    $('.customer-sign-in').show();
+  });
+
+  $('#login-box').on('ajax:success', function(e, data) {
+    if (data.success) {
+      location.reload();
+      return $('#submit_comment').slideToggle(1000, 'easeOutBack');
+    } else {
+      $('.error-sign-in-staff').addClass('alert alert-danger').show().html(data.errors);
+    }
+  });
+
+  $(document).on('click', '.open-sign-in-staff', function() {
+    $('.customer-sign-in').hide();
+    $('.staff-sign-in').show();
+  });
+
+  $(document).on('click', '.open-sign-in-customer', function() {
+    $('.staff-sign-in').hide();
+    $('.customer-sign-in').show();
   });
 
   $(document).on('click', '.btn-edit-customer-2', function() {

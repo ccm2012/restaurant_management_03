@@ -15,6 +15,7 @@ class Customer < ApplicationRecord
     uniqueness: {case_sensitive: false}
   validates :warning_times, presence: true,
     numericality: {greater_than: Settings.validates.blacklist.greater_than}
+  validates :phone_num, presence: true, numericality: true
   after_save :generate_code
 
   def membership_money_paid

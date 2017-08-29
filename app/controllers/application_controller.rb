@@ -2,6 +2,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionHelper
+  include CustomerHelper
 
   def current_ability
     @current_ability ||= Ability.new current_staff

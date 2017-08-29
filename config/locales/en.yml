@@ -850,11 +850,16 @@ en:
     sign_in2: "Sign In"
     sign_in_with: "Sign in with %{provider}"
     sign_in_with_gg: "Sign in with Google"
+    sign_in_as_staff: "Already have account"
+    sign_in_as_customer: "Sign in with Google"
+    success_sign_in_staff: "Sign in successfully."
     sign_up: "Sign up"
     forgot_pass: "Forgot your password?"
     receive_confirmation: "Didn't receive confirmation instructions?"
     receive_unlock: "Didn't receive unlock instructions?"
     welcome: "Welcome to "
+    incorrect: Incorrect email or password
+    success: Sign in successfully
     omniauth_callbacks:
       customer:
         google: Successfully sign in with Google
