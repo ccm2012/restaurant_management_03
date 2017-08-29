@@ -1,0 +1,118 @@
+@import "color";
+
+$golden-white: #e9cc1a;
+$black-border: rgba(0, 0, 0, .1);
+$light-blue-fb: #5b7bd5;
+$blue-fb: #4c69ba;
+$da-blue-fb: #4864b1;
+$dar-blue-fb: #364e92;
+$dark-blue-fb: #3b55a0;
+$darker-blue-fb: #354c8c;
+$light-red-gg: #e74b37;
+$red-gg: #dd4b39;
+$dark-red-gg: #bb3f30;
+
+.login-btn {
+  border: 0;
+  border-radius: .2em;
+  box-sizing: border-box;
+  color: $white;
+  display: block;
+  font-size: 1.5em;
+  font-variant: small-caps;
+  line-height: 34px;
+  margin: .2em;
+  padding: 0 15px 0 46px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 42%;
+}
+
+.login-btn::before {
+  box-sizing: border-box;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 34px;
+}
+
+.login-btn:focus {
+  outline: none;
+}
+
+.login-btn:active {
+  box-shadow: inset 0 0 0 32px $black-border;
+}
+
+.login-btn--facebook {
+  background-color: $blue-fb;
+  background-image: linear-gradient($blue-fb, $dark-blue-fb);
+  font-family: Love Ya Like A Sister;
+  text-shadow: 0 -1px 0 $darker-blue-fb;
+}
+
+.login-btn--facebook::before {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png") 6px 6px no-repeat;
+  border-right: $dar-blue-fb 1px solid;
+}
+
+.login-btn--facebook:hover,
+.login-btn--facebook:focus {
+  background-color: $light-blue-fb;
+  background-image: linear-gradient($light-blue-fb, $da-blue-fb);
+}
+
+.login-btn--google {
+  background: $red-gg;
+  font-family: Love Ya Like A Sister;
+}
+
+.login-btn--google::before {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png") 6px 6px no-repeat;
+  border-right: $dark-red-gg 1px solid;
+}
+
+.login-btn--google:hover,
+.login-btn--google:focus {
+  background: $light-red-gg;
+}
+
+.white-text {
+  color: $white;
+}
+
+.log-btn3 {
+  background: $golden;
+  border: 1px solid $golden-dark;
+  border-radius: 4px;
+  color: $white;
+  display: inline-block;
+  font-family: Love Ya Like A Sister;
+  font-size: 2em;
+  font-variant: small-caps;
+  height: 50px;
+  margin-top: 10px;
+  text-decoration: none;
+  width: 100%;
+}
+
+.log-btn3:hover {
+  background: $golden-white;
+}
+
+.sign-in-welcome {
+  font-family: Love Ya Like A Sister;
+
+  .welcome {
+    color: $gray-dark;
+    font-size: 20px;
+  }
+
+  .brand {
+    font-size: 40px;
+    font-weight: 600;
+  }
+}

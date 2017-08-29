@@ -14,3 +14,7 @@ ControlParameter:
   exclude:
    - "Ability#initialize"
    - "SessionHelper#load_info"
+
+UncommunicativeMethodName:
+  exclude:
+   - "Customers::OmniauthCallbacksController#google_oauth2"

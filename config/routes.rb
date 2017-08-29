@@ -5,6 +5,8 @@ class ActionDispatch::Routing::Mapper
 end
 
 Rails.application.routes.draw do
+  devise_for :customers,
+    controllers:{omniauth_callbacks: "customers/omniauth_callbacks"}
   post "/rate", to: "rater#create", as: "rate"
   devise_for :staffs, skip: :sessions, controller: {sessions: "sessions"}
   draw :api

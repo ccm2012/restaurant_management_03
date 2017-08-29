@@ -11,7 +11,7 @@ Devise.setup do |config|
   # config.ldap_check_attributes = false
   # config.ldap_use_admin_to_bind = false
   # config.ldap_ad_group_check = false
-
+  config.omniauth :google_oauth2, ENV["GOOGLE_OAUTH2_APP_ID"], ENV["GOOGLE_OAUTH2_APP_SECRET"], {scope: "email"}
 
   Warden::Manager.after_set_user do |user,auth,opts|
     auth.cookies.signed[:staff_id] = user.id

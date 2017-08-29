@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170803093422) do
+ActiveRecord::Schema.define(version: 20170815153646) do
 
   create_table "average_caches", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "rater_id"
@@ -76,10 +76,24 @@ ActiveRecord::Schema.define(version: 20170803093422) do
     t.string   "email"
     t.string   "phone_num"
     t.string   "code"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-    t.integer  "warning_times", default: 0
-    t.integer  "money_paid",    default: 0
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.integer  "warning_times",          default: 0
+    t.integer  "money_paid",             default: 0
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "provider"
+    t.string   "access_token"
+    t.string   "uid"
+    t.string   "google_secret"
+    t.index ["reset_password_token"], name: "index_customers_on_reset_password_token", unique: true, using: :btree
   end
 
   create_table "discount_codes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -129,7 +143,7 @@ ActiveRecord::Schema.define(version: 20170803093422) do
     t.integer  "status",       default: 0
     t.datetime "created_at",                                   null: false
     t.datetime "updated_at",                                   null: false
-    t.datetime "cooking_time", default: '2017-08-04 16:38:46'
+    t.datetime "cooking_time", default: '2017-08-15 23:02:10'
   end
 
   create_table "order_dishes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -142,7 +156,7 @@ ActiveRecord::Schema.define(version: 20170803093422) do
     t.integer  "status",       default: 0
     t.datetime "created_at",                                   null: false
     t.datetime "updated_at",                                   null: false
-    t.datetime "cooking_time", default: '2017-08-04 16:38:45'
+    t.datetime "cooking_time", default: '2017-08-15 23:02:10'
   end
 
   create_table "orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
